@@ -1,0 +1,14 @@
+{
+  "name": "workflows",
+  "homepage": "https://github.com/planetoftheweb/workflows",
+  "_release": "112a4adffe",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "112a4adffe63ee6a4cfd13e25a400af2aafc55ae"
+  },
+  "_source": "https://github.com/planetoftheweb/workflows.git",
+  "_target": "*",
+  "_originalSource": "planetoftheweb/workflows",
+  "_direct": true
+}

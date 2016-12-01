@@ -1,0 +1,16 @@
+{
+  "name": "workflows",
+  "version": "0.0.1",
+  "description": "A project to showcase workflows",
+  "main": "index.js",
+  "dependencies": {
+    "mustache": "^2.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
