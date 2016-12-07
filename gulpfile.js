@@ -36,10 +36,10 @@ gulp.task('js', function () {
 gulp.task('compass', function () {
     gulp.src(sassSources)
         .pipe(compass({
-                sass: 'components/sass',
+               sass: 'components/sass',
                 image: 'builds/development/images',
                 style: 'expanded' // From (http://sass-lang.com/documentation/file.SASS_REFERENCE.html) that mentions the different types of  styles.
             })
-            .on('error', gulptil.log)) // this is print error to console
-        .pipe(gulp.dest('components/css'))
+            .on('error', gulptil.log)) 
+        .pipe(gulp.dest('builds/development/css'))
 });

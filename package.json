@@ -7,7 +7,6 @@
     "mustache": "^2.3.0"
   },
   "devDependencies": {
-    "compass": "^0.1.1",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-coffee": "^2.3.3",
@@ -16,8 +15,7 @@
     "gulp-ruby-sass": "^2.1.1",
     "gulp-util": "^3.0.7",
     "jquery": "^3.1.1",
-    "mustache": "^2.3.0",
-    "ruby": "^0.6.1"
+    "mustache": "^2.3.0"
   },
   "repository": {
     "type": "git",
