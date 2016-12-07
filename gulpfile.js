@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     gulptil = require('gulp-util'),
     coffee = require('gulp-coffee'),
     browserify = require('gulp-browserify'),
+    compass = require('gulp-compass'),
     concat = require('gulp-concat');
 
 var coffeeSrouces = ['components/coffee/tagline.coffee'];
@@ -12,6 +13,8 @@ var jsSources = [
     'components/scripts/tagline.js',
     'components/scripts/template.js'
 ];
+
+var sassSources = ['components/sass/style.scss']
 
 gulp.task('coffee', function () {
     gulp.src(coffeeSrouces)
@@ -28,4 +31,15 @@ gulp.task('js', function () {
         .pipe(concat('script.js'))
         .pipe(browserify())
         .pipe(gulp.dest('builds/development/js'))
+});
+
+gulp.task('compass', function () {
+    gulp.src(sassSources)
+        .pipe(compass({
+                sass: 'components/sass',
+                image: 'builds/development/images',
+                style: 'expanded' // From (http://sass-lang.com/documentation/file.SASS_REFERENCE.html) that mentions the different types of  styles.
+            })
+            .on('error', gulptil.log)) // this is print error to console
+        .pipe(gulp.dest('components/css'))
 });
