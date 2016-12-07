@@ -25,7 +25,7 @@ gulp.task('coffee', function () {
             .on('error', gulptil.log)) // If you don't have this .on('error) it will crash gulp if you get an error.
         .pipe(gulp.dest('components/scripts')) // this will move the results of the coffee command to this method
 });
-
+// the [] array parameters after 'js' are dependencies that will run before the current one 'js'. You can list a few array items for the parameter.
 gulp.task('js', function () {
     gulp.src(jsSources)
         .pipe(concat('script.js'))
@@ -43,3 +43,5 @@ gulp.task('compass', function () {
             .on('error', gulptil.log)) 
         .pipe(gulp.dest('builds/development/css'))
 });
+
+gulp.task('default', ['coffee', 'js', 'compass']);
