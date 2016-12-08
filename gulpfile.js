@@ -47,6 +47,7 @@ gulp.task('compass', function () {
 gulp.task('default', ['coffee', 'js', 'compass']);
 
 gulp.task('watch', function(){
-   gulp.watch(coffeeSources, ['coffee']);
+   gulp.watch(coffeeSources, ['coffee']);// "watch" is a reserved word!
    gulp.watch(jsSources, ['js']);
+   gulp.watch('workflows/components/sass/*.scss', ['compass']);//so this will monitor any changes in the components folder and sass folder. It will monitor any changes in those folders that contain .scss
 });
