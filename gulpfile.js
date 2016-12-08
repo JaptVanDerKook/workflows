@@ -30,7 +30,7 @@ gulp.task('js', function () {
     gulp.src(jsSources)
         .pipe(concat('script.js'))
         .pipe(browserify())
-        .pipe(gulp.dest('builds/development/js'))
+        .pipe(gulp.dest('builds/development/js')) // this task will push all the js files into the development folder
 });
 
 gulp.task('compass', function () {
@@ -47,5 +47,6 @@ gulp.task('compass', function () {
 gulp.task('default', ['coffee', 'js', 'compass']);
 
 gulp.task('watch', function(){
-   gulp.watch('coffeeSources', ['coffee']) 
+   gulp.watch(coffeeSources, ['coffee']);
+   gulp.watch(jsSources, ['js']);
 });
